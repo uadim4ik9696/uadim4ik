@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Gloria+Hallelujah&display=swap');
+
+:root {
+  /* --light-pink: #ffffff; */
+  --yellow: #c6a76a;
+  --red: #a9382d;
+  --dark-green: #303330;
+  --green: #3c574f;
+}
+
+body {
+  background-image: linear-gradient(
+    90deg,
+    var(--green) 40%,
+    var(--yellow) 150%
+  );
+
+  font-family: 'Gloria Hallelujah', cursive;
+}
+/* --------------------------------------------------header--------------------------------------------------------------------------------------- */
+.header {
+  height: 80px;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.logo {
+  background-image: linear-gradient(
+      45deg,
+      var(--red) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--red) 75%,
+      var(--red)
+    ),
+    linear-gradient(
+      45deg,
+      var(--red) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--red) 75%,
+      var(--red)
+    );
+  background-size: 80px 80px;
+  background-position: 0 0, 36px 36px;
+  border: 2px solid var(--dark-green);
+  border-radius: 10px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.ab {
+  position: absolute;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 48px;
+  color: var(--dark-green);
+}
+.btn {
+  width: auto;
+  font-family: 'Balsamiq Sans', cursive;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  height: 55px;
+  line-height: 55px;
+  font-size: 20px;
+  padding: 0 35px;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 5;
+  transition: 0.5s all;
+  color: var(--dark-green);
+}
+.btn::before,
+.btn::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  transition: 0.3s all;
+  border-radius: 4px;
+}
+.btn::before {
+  background-color: var(--green);
+  top: 0;
+  left: 0;
+  z-index: -2;
+  animation: toBottom 3s ease infinite;
+}
+.btn::after {
+  background-color: var(--red);
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  animation: toTop 3s ease infinite;
+}
+.btn:hover {
+  color: var(--dark-green);
+  font-size: 20, 5px;
+}
+.btn:hover::before {
+  width: 100%;
+  height: 100%;
+  top: 10px;
+  left: 10px;
+  animation: none;
+  border-radius: 10px;
+}
+.btn:hover::after {
+  width: 100%;
+  height: 100%;
+  animation: none;
+  border-radius: 10px;
+}
+
+.btn:active {
+  color: var(--yellow);
+  transition: none;
+}
+
+/* -----------------------------------header----------------------------------------------------------------------------------------------------- */
+/* -----------------------------------body------------------------------------------------------------------------------------------------------- */
+.foto_conteiner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.myfoto {
+  width: 30%;
+  border-radius: 30px;
+}
+.text {
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 30px;
+  margin: 10px;
+  color: var(--dark-green);
+}
